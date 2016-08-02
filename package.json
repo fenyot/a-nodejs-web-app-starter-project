@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "pm2 start process.json --env local",
+    "stop": "pm2 stop all",
     "test": "standard && node util/run-test.js"
   },
   "repository": {

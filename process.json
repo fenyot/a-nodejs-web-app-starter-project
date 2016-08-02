@@ -1,0 +1,46 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "api/app.js",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "local"
+      },
+      "env_staging": {
+        "NODE_ENV": "staging"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "admin",
+      "script": "admin/app.js",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "local"
+      },
+      "env_staging": {
+        "NODE_ENV": "staging"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "site",
+      "script": "site/app.js",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "local"
+      },
+      "env_staging": {
+        "NODE_ENV": "staging"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
