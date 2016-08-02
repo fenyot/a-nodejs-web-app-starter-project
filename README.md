@@ -4,6 +4,7 @@
 - Download the source
 - Go to *a-nodejs-web-app-starter-project* directory
 - Run *npm install*
+- Run *npm install pm2 -g*
 - Start services with *npm start*
 
 ## Features
