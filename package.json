@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/fenyot/a-nodejs-web-app-starter-project/issues"
   },
-  "homepage": "https://github.com/fenyot/a-nodejs-web-app-starter-project#readme"
+  "homepage": "https://github.com/fenyot/a-nodejs-web-app-starter-project#readme",
+  "dependencies": {
+    "glob": "^7.0.5",
+    "jsonschema": "^1.1.0",
+    "koa": "^1.2.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-logger": "^1.3.0",
+    "koa-router": "^5.4.0"
+  }
 }
