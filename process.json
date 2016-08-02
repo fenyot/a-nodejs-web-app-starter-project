@@ -5,13 +5,16 @@
       "script": "api/app.js",
       "watch": true,
       "env": {
-        "NODE_ENV": "local"
+        "NODE_ENV": "local",
+        "PORT": 3000
       },
       "env_staging": {
-        "NODE_ENV": "staging"
+        "NODE_ENV": "staging",
+        "PORT": 3000
       },
       "env_production": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "PORT": 3000
       }
     },
     {
@@ -19,13 +22,16 @@
       "script": "admin/app.js",
       "watch": true,
       "env": {
-        "NODE_ENV": "local"
+        "NODE_ENV": "local",
+        "PORT": 3001
       },
       "env_staging": {
-        "NODE_ENV": "staging"
+        "NODE_ENV": "staging",
+        "PORT": 3001
       },
       "env_production": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "PORT": 3001
       }
     },
     {
@@ -33,13 +39,16 @@
       "script": "site/app.js",
       "watch": true,
       "env": {
-        "NODE_ENV": "local"
+        "NODE_ENV": "local",
+        "PORT": 3002
       },
       "env_staging": {
-        "NODE_ENV": "staging"
+        "NODE_ENV": "staging",
+        "PORT": 3002
       },
       "env_production": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "PORT": 3002
       }
     }
   ]
