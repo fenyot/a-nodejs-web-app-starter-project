@@ -6,6 +6,7 @@
 - Run *npm install*
 - Run *npm install pm2 -g*
 - Start services with *npm start*
+- Run tests with *npm test*
 
 ## Features
 - Starter application skeleton using koa HTTP framework
