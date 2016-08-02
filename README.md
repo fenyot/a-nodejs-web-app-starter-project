@@ -1,6 +1,6 @@
 # A node.js web application starter project
 
-## Features
+## Planned Features
 - Starter application skeleton using koa HTTP framework
 - local, staging and production environments
 - Micro-Service architecture with pm2 process manager
