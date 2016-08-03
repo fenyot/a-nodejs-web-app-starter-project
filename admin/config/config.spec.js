@@ -10,6 +10,7 @@ describe('Admin configuration setup', () => {
 
     expect(config).to.have.property('mode').that.is.equal('local')
     expect(config).to.have.property('port').that.is.a('number')
+    expect(config).to.have.property('mongo').that.is.a('string')
 
     done()
   })
@@ -19,6 +20,7 @@ describe('Admin configuration setup', () => {
 
     expect(config).to.have.property('mode').that.is.equal('staging')
     expect(config).to.have.property('port').that.is.a('number')
+    expect(config).to.have.property('mongo').that.is.a('string')
 
     done()
   })
@@ -28,6 +30,7 @@ describe('Admin configuration setup', () => {
 
     expect(config).to.have.property('mode').that.is.equal('production')
     expect(config).to.have.property('port').that.is.a('number')
+    expect(config).to.have.property('mongo').that.is.a('string')
 
     done()
   })
