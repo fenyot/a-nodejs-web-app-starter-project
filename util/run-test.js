@@ -1,6 +1,6 @@
 'use strict'
 
-process.env.NODE_ENV = 'local'
+process.env.NODE_ENV = 'test'
 
 const path = require('path')
 const glob = require('glob')

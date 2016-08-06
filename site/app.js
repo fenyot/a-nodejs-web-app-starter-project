@@ -8,6 +8,7 @@ const bodyParser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const mongoose = require('mongoose')
 const config = require(path.join(__dirname, 'config', 'config'))()
+const isModule = require.main !== module
 
 mongoose.Promise = global.Promise
 mongoose.connect(config.mongo)
@@ -18,9 +19,7 @@ db.on('error', function () {
   throw new Error('unable to connect to database at ' + config.mongo)
 })
 
-let server
-
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
   app.use(logger())
 }
 
@@ -30,11 +29,13 @@ glob.sync(path.join(__dirname, 'route', '**', '*.js')).forEach(file => {
   app.use(require(file).routes())
 })
 
-const httpServer = http.createServer(app.callback())
-module.exports = httpServer
+const server = http.createServer(app.callback())
 
-httpServer.listen(config.port, err => {
-  if (err) throw err
-  server = httpServer
-  console.log(`Site ${config.mode} server is listening on port ${server.address().port}`)
-})
+module.exports = server
+
+if (!isModule) {
+  server.listen(config.port, err => {
+    if (err) throw err
+    console.log(`Site ${config.mode} server is listening on port ${server.address().port}`)
+  })
+}
