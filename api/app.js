@@ -19,7 +19,7 @@ db.on('error', function () {
   throw new Error('unable to connect to database at ' + config.mongo)
 })
 
-if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'testing') {
   app.use(logger())
 }
 

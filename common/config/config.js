@@ -7,10 +7,10 @@ module.exports = function (port) {
       port: port,
       mongo: 'mongodb://127.0.0.1/web-app-local'
     },
-    test: {
-      mode: 'test',
+    testing: {
+      mode: 'testing',
       port: port,
-      mongo: 'mongodb://127.0.0.1/web-app-test'
+      mongo: 'mongodb://127.0.0.1/web-app-testing'
     },
     staging: {
       mode: 'staging',
@@ -20,7 +20,7 @@ module.exports = function (port) {
     production: {
       mode: 'production',
       port: port,
-      mongo: 'mongodb://127.0.0.2/web-app-production'
+      mongo: 'mongodb://127.0.0.1/web-app-production'
     }
   }
 }
