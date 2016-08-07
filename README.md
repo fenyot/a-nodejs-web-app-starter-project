@@ -8,13 +8,14 @@
 - Start services with *npm start*
 - Run tests with *npm test*
 
-## Features
+## Examples
 - Starter application skeleton using koa HTTP framework
 - local, testing, staging and production environments
 - Micro-Service architecture with PM2 process manager
 - api, admin and site services
 - Standard JavaScript style
 - JSON validation with JSON Schema for api services
+- Integration tests with co-supertest, Mocha and Chai
 
-## Planned Features
-- Integration and unit tests with Mocha, Chai and sinon
+## Planned examples
+- Unit tests with Mocha, Chai and sinon
