@@ -1,0 +1,21 @@
+{
+  "id": "/article_get",
+  "title": "Article schema",
+  "description": "The article record definition",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the article"
+    },
+    "content": {
+      "type": "string",
+      "description": "The content of the article"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ],
+  "additionalProperties": true
+}
