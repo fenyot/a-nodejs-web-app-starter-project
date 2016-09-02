@@ -6,6 +6,7 @@ const http = require('http')
 const app = require('koa')()
 const bodyParser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const handlebars = require('koa-handlebars')
 const mongoose = require('mongoose')
 const config = require(path.join(__dirname, 'config', 'config'))()
 const isModule = require.main !== module
@@ -24,6 +25,12 @@ if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'testing')
 }
 
 app.use(bodyParser())
+
+app.use(handlebars({
+  layoutsDir: path.join('admin', 'app', 'view', 'layout'),
+  viewsDir: path.join('admin', 'app', 'view'),
+  defaultLayout: 'main'
+}))
 
 glob.sync(path.join(__dirname, 'route', '**', '*.js')).forEach(file => {
   app.use(require(file).routes())
