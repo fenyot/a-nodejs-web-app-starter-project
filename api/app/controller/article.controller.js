@@ -3,17 +3,17 @@
 const path = require('path')
 const glob = require('glob')
 const fs = require('fs')
-const JsonSchema = require('jsonschema')
-const validator = new JsonSchema.Validator()
 
-glob
-  .sync(path.join('api', 'resource', 'json_schema', 'article', '*.schema.json'))
-  .forEach(file => {
-    let schema = JSON.parse(fs.readFileSync(file, 'utf8'))
-    validator.addSchema(schema, schema.id)
-  })
+module.exports = function (Article, JsonSchema) {
+  let validator = new JsonSchema.Validator()
 
-module.exports = function (Article) {
+  glob
+    .sync(path.join('api', 'resource', 'json_schema', 'article', '*.schema.json'))
+    .forEach(file => {
+      let schema = JSON.parse(fs.readFileSync(file, 'utf8'))
+      validator.addSchema(schema, schema.id)
+    })
+
   return {
     getArticle: function * () {
       try {

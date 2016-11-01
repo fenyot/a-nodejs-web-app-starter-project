@@ -8,7 +8,7 @@ let article
 
 describe('Article API integration testing', function () {
   describe('article post', () => {
-    it('should return error object if article not saved', function * () {
+    it('should return error object if the article is not saved', function * () {
       let params = {
         title: 'An article from testing'
       }
@@ -18,7 +18,7 @@ describe('Article API integration testing', function () {
       expect(response.body).to.have.property('error').that.is.a('string')
     })
 
-    it('should return success object with created record if article saved', function * () {
+    it('should return success object with created record if the article was saved', function * () {
       let params = {
         title: 'An article from testing',
         content: 'An article from testing'
@@ -38,9 +38,9 @@ describe('Article API integration testing', function () {
   })
 
   describe('article update', () => {
-    it('should return error object if article not updated')
+    it('should return error object if the article is not updated')
 
-    it('should return success object with updated record if article updated', function * () {
+    it('should return success object with updated record if the article was updated', function * () {
       let params = {
         title: 'Updated article from testing'
       }
