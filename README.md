@@ -1,5 +1,9 @@
 # A node.js web application starter project
 
+## Prerequisites
+- Installed Node.js
+- Installed MongoDB
+
 ## Installation
 - Download the source
 - Go to *a-nodejs-web-app-starter-project* directory
@@ -15,7 +19,5 @@
 - api, admin and site services
 - Standard JavaScript style
 - JSON validation with JSON Schema for api services
-- Integration tests with co-supertest, Mocha and Chai
-
-## Planned examples
 - Unit tests with Mocha, Chai and sinon
+- Integration tests with co-supertest, Mocha and
