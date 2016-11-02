@@ -18,6 +18,7 @@ module.exports = function (Article, JsonSchema) {
     getArticle: function * () {
       try {
         let options = this.params.id ? { _id: this.params.id } : null
+
         this.body = {
           success: true,
           records: yield Article.find(options)
@@ -28,6 +29,8 @@ module.exports = function (Article, JsonSchema) {
           error: e.message
         }
       }
+
+      return this.body
     },
 
     postArticle: function * () {
@@ -48,6 +51,8 @@ module.exports = function (Article, JsonSchema) {
           error: e.message
         }
       }
+
+      return this.body
     },
 
     updateArticle: function * () {
@@ -62,6 +67,8 @@ module.exports = function (Article, JsonSchema) {
           error: e.message
         }
       }
+
+      return this.body
     },
 
     deleteArticle: function * () {
@@ -76,6 +83,8 @@ module.exports = function (Article, JsonSchema) {
           error: e.message
         }
       }
+
+      return this.body
     }
   }
 }

@@ -16,13 +16,32 @@ const data = {
   }
 }
 
+require('co-supertest')(require('..'))
+
 describe('ArticleController', function () {
   describe('Get all the articles', function () {
-    it('Should call find once')
+    it('should call find once', function * () {
+      let obj = {
+        params: {
+          id: undefined
+        }
+      }
+
+      let find = sinon.spy(Model, 'find')
+      let getArticle = sinon.spy(Controller, 'getArticle')
+
+      yield Controller.getArticle.call(obj)
+
+      getArticle.restore()
+      find.restore()
+
+      sinon.assert.calledOnce(getArticle)
+      sinon.assert.calledOnce(find)
+    })
   })
 
   describe('Article post', function () {
-    it('Should validate the JSON object', function * () {
+    it('should validate the JSON object', function * () {
       let save = sinon.stub(Model.prototype, 'save')
       save.yields()
 
@@ -35,7 +54,7 @@ describe('ArticleController', function () {
       sinon.assert.calledOnce(validate)
     })
 
-    it('Should call save only once', function * () {
+    it('should call save only once', function * () {
       let save = sinon.stub(Model.prototype, 'save')
       save.yields()
 
@@ -47,11 +66,11 @@ describe('ArticleController', function () {
   })
 
   describe('Article update', function () {
-    it('Should validate the JSON object')
-    it('Should call save only once')
+    it('should validate the JSON object')
+    it('should call save only once')
   })
 
   describe('Delete an article', function () {
-    it('Should delete an article by specified id')
+    it('should delete an article by specified id')
   })
 })
