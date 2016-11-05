@@ -1,0 +1,4 @@
+{
+  "id": "/article_put",
+  "$ref": "/article_post"
+}
