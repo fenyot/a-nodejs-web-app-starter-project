@@ -20,4 +20,4 @@
 - Standard JavaScript style
 - JSON validation with JSON Schema for api services
 - Unit tests with Mocha, Chai and sinon
-- Integration tests with co-supertest, Mocha and
+- Integration tests with co-supertest, Mocha and Chai
