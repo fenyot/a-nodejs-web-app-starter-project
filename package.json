@@ -34,7 +34,6 @@
     "co-supertest": "0.0.10",
     "mocha": "^3.0.0",
     "sinon": "^1.17.5",
-    "sinon-mongoose": "^1.2.1",
     "standard": "^7.1.2",
     "supertest": "^1.2.0"
   }
