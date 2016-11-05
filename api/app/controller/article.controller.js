@@ -57,6 +57,10 @@ module.exports = function (Article, JsonSchema) {
 
     updateArticle: function * () {
       try {
+        let schema = validator.getSchema('/article_put')
+
+        validator.validate(this.request.body, schema)
+
         this.body = {
           success: true,
           article: yield Article.update({ _id: this.params.id }, { $set: this.request.body })
