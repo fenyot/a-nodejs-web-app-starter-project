@@ -1,5 +1,5 @@
 # A node.js web application starter project
-
+[![Build Status](https://travis-ci.org/fenyot/a-nodejs-web-app-starter-project.svg?branch=master)](https://travis-ci.org/fenyot/a-nodejs-web-app-starter-project)
 ## Prerequisites
 - Installed Node.js
 - Installed MongoDB
